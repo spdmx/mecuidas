@@ -1,0 +1,175 @@
+.contact {
+  position: relative;
+  padding: 8rem 2rem;
+  overflow: hidden;
+}
+
+.contact-fluid-layout {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+}
+
+.contact-info-container {
+  flex: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-intro {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+  max-width: 90%;
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Glass Cards for Contact Info */
+.contact-glass-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.clickable-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contact-glass-card:hover {
+  transform: translateX(20px);
+}
+
+.contact-glass-card .icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 1);
+}
+
+.contact-glass-card .details h3 {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-glass-card .details .highlight {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-glass-card .details p {
+  color: var(--color-text-dark);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-glass-card .details .sub-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Fluid CTA Area */
+.contact-cta-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.cta-blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob-spin 20s linear infinite;
+  opacity: 0.8;
+  filter: blur(20px);
+  z-index: 1;
+}
+
+@keyframes blob-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.contact-cta-glass {
+  position: relative;
+  z-index: 5;
+  padding: 4rem 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  /* Intense shadow for depth over the blob */
+  box-shadow: 
+    0 30px 60px rgba(0, 90, 156, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.cta-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: pulse-emoji 2s infinite alternate;
+}
+
+@keyframes pulse-emoji {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.cta-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.btn-cta {
+  padding: 1.2rem 3.5rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .contact-fluid-layout {
+    flex-direction: column;
+    gap: 6rem;
+  }
+  
+  .contact-info-container {
+    width: 100%;
+  }
+  
+  .contact-cta-wrapper {
+    width: 100%;
+  }
+}

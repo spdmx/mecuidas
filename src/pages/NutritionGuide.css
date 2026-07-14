@@ -1,0 +1,328 @@
+.nutrition-page {
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+
+.nutrition-container {
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+/* Base header */
+.nutri-header {
+  padding: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  border-top: 4px solid var(--color-primary);
+}
+
+.nutri-header h1 {
+  font-size: 2.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.nutri-header .subtitle {
+  font-size: 1.3rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3rem;
+}
+
+.nutri-intro-box {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: left;
+  border-left: 5px solid var(--color-secondary);
+}
+
+.nutri-intro-box h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.nutri-intro-box p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.nutri-intro-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sections */
+.nutri-section {
+  margin-bottom: 5rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-primary);
+}
+
+/* Nutri Grid for Good Foods */
+.nutri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.nutri-card {
+  padding: 2rem;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid transparent;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.nutri-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-protein { border-top-color: #e74c3c; }
+.card-veggies { border-top-color: #2ecc71; }
+.card-carbs { border-top-color: #f1c40f; }
+.card-fats { border-top-color: #e67e22; }
+.card-fruits { border-top-color: #9b59b6; }
+.card-structure { border-top-color: #34495e; }
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nutri-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.priority-tag {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-protein .priority-tag {
+  background: rgba(231, 76, 60, 0.15);
+  color: #c0392b;
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.25);
+}
+.card-veggies .priority-tag {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.25);
+}
+.card-carbs .priority-tag {
+  background: rgba(241, 196, 15, 0.15);
+  color: #b7950b;
+  box-shadow: 0 8px 20px rgba(241, 196, 15, 0.25);
+}
+.card-fats .priority-tag {
+  background: rgba(230, 126, 34, 0.15);
+  color: #d35400;
+  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.25);
+}
+.card-fruits .priority-tag {
+  background: rgba(155, 89, 182, 0.15);
+  color: #8e44ad;
+  box-shadow: 0 8px 20px rgba(155, 89, 182, 0.25);
+}
+.card-structure .priority-tag {
+  background: rgba(52, 73, 94, 0.15);
+  color: #2c3e50;
+  box-shadow: 0 8px 20px rgba(52, 73, 94, 0.25);
+}
+
+.nutri-card > p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.food-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.food-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 1.05rem;
+}
+
+.food-list li:last-child {
+  border-bottom: none;
+}
+
+.star {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* Danger Zone */
+.danger-card {
+  background: rgba(255, 235, 235, 0.6);
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  padding: 3rem;
+  border-left: 6px solid #e74c3c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.danger-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.danger-header h2 {
+  color: #c0392b;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.danger-header p {
+  font-size: 1.1rem;
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.danger-list-wrapper {
+  background: rgba(255,255,255,0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.danger-list {
+  columns: 2;
+  list-style-type: none;
+  padding: 0;
+}
+
+.danger-list li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #c0392b;
+  position: relative;
+  padding-left: 1.5rem;
+  break-inside: avoid;
+}
+
+.danger-list li::before {
+  content: "×";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Habits */
+.habits-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.habit-card {
+  padding: 2.5rem;
+}
+
+.water-card {
+  background: rgba(230, 245, 255, 0.6);
+  border-top: 4px solid #3498db;
+}
+
+.habit-card h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.habit-card p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.habit-tip {
+  background: rgba(255,255,255,0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  border-left: 4px solid #3498db;
+}
+
+.rules-list {
+  padding-left: 1.5rem;
+}
+
+.rules-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.warning-text {
+  font-size: 0.9rem !important;
+  color: #e67e22 !important;
+}
+
+/* Disclaimer */
+.disclaimer-alert {
+  background: rgba(230, 126, 34, 0.1);
+  border-left: 4px solid #e67e22;
+  padding: 1.2rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.disclaimer-alert p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+}
+
+/* Sources Footer */
+.nutri-sources {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin-top: 3rem;
+}
+
+.nutri-sources h4 {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.nutri-sources ul {
+  padding-left: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.nutri-sources li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .nutri-header {
+    padding: 2rem 1.5rem;
+  }
+  
+  .danger-list {
+    columns: 1;
+  }
+}

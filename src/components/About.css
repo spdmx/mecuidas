@@ -1,0 +1,154 @@
+.about {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 2rem;
+}
+
+/* Anti-Grid layout via CSS Grid */
+.about-anti-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  position: relative;
+}
+
+.about-text-content {
+  grid-column: 6 / 13;
+  grid-row: 1;
+  padding: 4rem;
+  z-index: 10;
+  /* Glassmorphism classes applied from index.css */
+}
+
+.about-visuals {
+  grid-column: 1 / 8;
+  grid-row: 1;
+  z-index: 5;
+  position: relative;
+}
+
+.doctor-image-wrapper {
+  border-radius: 40px 10px 40px 10px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 90, 156, 0.2);
+  position: relative;
+  height: 600px;
+}
+
+.doctor-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.doctor-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.experience-glass-badge {
+  position: absolute;
+  bottom: 40px;
+  left: -20px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 20;
+  animation: float-slow 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.85); /* Make it less transparent so text is visible */
+}
+
+.experience-glass-badge .number {
+  font-size: 3.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary); /* Use solid color instead of gradient clip to avoid issues */
+  line-height: 1;
+}
+
+.experience-glass-badge .text {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--color-primary); /* High contrast color */
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5); /* Helps readability */
+  white-space: nowrap; /* Prevent wrapping unexpectedly */
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.about-text-content p {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.about-features {
+  margin-top: 2.5rem;
+}
+
+.about-features li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.about-features .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 90, 156, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .about-anti-grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .about-visuals {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .doctor-image-wrapper {
+    height: 400px;
+  }
+  
+  .about-text-content {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+  
+  .experience-glass-badge {
+    left: 10px;
+    bottom: -20px;
+  }
+}
