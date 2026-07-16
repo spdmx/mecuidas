@@ -20,6 +20,13 @@ const Login = () => {
   return (
     <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <div className="container" style={{ maxWidth: '400px' }}>
+        <button 
+          className="btn btn-secondary" 
+          onClick={() => navigate('/')}
+          style={{ marginBottom: '2rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}
+        >
+          ← Volver al Inicio
+        </button>
         <motion.div 
           className="glass-panel"
           initial={{ opacity: 0, y: 30 }}
